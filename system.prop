@@ -103,6 +103,3 @@ ro.usb.bpteth_adb=0x2ec6
 
 # Storage
 ro.sdcardfs.enable=true
-
-# IMS
-persist.ims.volte=false
