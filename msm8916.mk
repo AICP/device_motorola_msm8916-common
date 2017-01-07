@@ -107,6 +107,9 @@ PRODUCT_PACKAGES += \
     ethertypes \
     libebtc
 
+# EGL implementation
+PRODUCT_PACKAGES += libGLES_android
+
 # Firmware Extraction
 ifeq ($(filter surnia,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
