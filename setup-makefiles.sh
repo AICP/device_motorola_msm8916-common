@@ -21,9 +21,9 @@ set -e
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-CM_ROOT="$MY_DIR"/../../..
+AICP_ROOT="$MY_DIR"/../../..
 
-HELPER="$CM_ROOT"/vendor/aicp/build/tools/extract_utils.sh
+HELPER="$AICP_ROOT"/vendor/aicp/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -31,7 +31,7 @@ fi
 . "$HELPER"
 
 # Initialize the helper for common
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$CM_ROOT" "true"
+setup_vendor "$DEVICE_COMMON" "$VENDOR" "$AICP_ROOT" "true"
 
 # Copyright headers and guards
 write_headers "harpia lux merlin osprey surnia"
@@ -44,7 +44,7 @@ write_footers
 
 if [ -s "$MY_DIR"/../$DEVICE/proprietary-files.txt ]; then
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$CM_ROOT"
+    setup_vendor "$DEVICE" "$VENDOR" "$AICP_ROOT"
 
     # Copyright headers and guards
     write_headers
