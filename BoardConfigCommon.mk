@@ -86,6 +86,10 @@ TARGET_QCOM_NO_FM_FIRMWARE := true
 # Filesystem
 TARGET_ANDROID_FILESYSTEM_CONFIG_H := $(VENDOR_PATH)/android_filesystem_config.h
 
+# GLES Shaders cache config options
+MAX_EGL_CACHE_KEY_SIZE := 12*1024
+MAX_EGL_CACHE_SIZE := 2048*1024
+
 # Init
 TARGET_UNIFIED_DEVICE := true
 
