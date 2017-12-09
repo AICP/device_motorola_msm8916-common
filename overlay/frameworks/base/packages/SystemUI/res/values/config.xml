@@ -26,5 +26,8 @@
 
     <!-- Force Low quality on scrren record for legacy devices -->
     <bool name="config_screenRecordforceLowQuality">true</bool>
+
+    <!-- Whether to show activity indicators in the status bar -->
+    <bool name="config_showActivity">true</bool>
 </resources>
 
