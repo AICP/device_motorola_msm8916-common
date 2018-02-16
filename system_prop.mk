@@ -56,6 +56,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.volte_avail_ovr=1 \
     persist.vendor.radio.jbims=1
 
+# IO Cgroups
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.iocgrp.config=1
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.ccodec=0 \
