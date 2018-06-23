@@ -56,6 +56,9 @@ on fs
     mkdir /persist/data 0700  system system
     restorecon_recursive /persist
 
+    # Start HW service manager early
+    start hwservicemanager
+
     setprop persist.adb.nonblocking_ffs 0
     setprop ro.adb.nonblocking_ffs 0
 
