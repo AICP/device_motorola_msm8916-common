@@ -97,6 +97,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.rild.nitz_short_ons_2="" \
     persist.rild.nitz_short_ons_3=""
 
+# OTA - create openrecoveryscript manually
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.aicp.create.ors.file=true
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     DEVICE_PROVISIONED=1 \
