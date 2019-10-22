@@ -128,7 +128,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     rild.libargs=-d/dev/smd0 \
     rild.libpath=/vendor/lib/libril-qc-qmi-1.so \
     ro.telephony.call_ring.multiple=false \
-    persist.radio.aosp_usr_pref_sel=true
+    persist.radio.aosp_usr_pref_sel=true \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
 
 # Security patch level
 PRODUCT_PROPERTY_OVERRIDES += \
