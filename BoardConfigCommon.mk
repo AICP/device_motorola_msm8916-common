@@ -138,7 +138,10 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(VENDOR_PATH)
 TARGET_USES_OLD_MNC_FORMAT := true
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS := firmware persist fsg
+BOARD_ROOT_EXTRA_FOLDERS := firmware fsg
+
+BOARD_ROOT_EXTRA_SYMLINKS := \
+    /mnt/vendor/persist:/persist
 
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
