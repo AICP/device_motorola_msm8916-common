@@ -38,7 +38,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_gl_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
-    debug.cpurend.vsync=false
+    debug.cpurend.vsync=false \
+    persist.hwc.mdpcomp.enable=1 \
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -59,6 +61,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.ccodec=0 \
     debug.stagefright.omx_default_rank.sw-audio=1 \
     debug.stagefright.omx_default_rank=0 \
+    persist.debug.wfd.enable=1 \
+    persist.sys.wfd.virtual=1 \
     vendor.mediacodec.binder.size=6 \
     vidc.enc.narrow.searchrange=1 \
     persist.media.treble_omx=false
