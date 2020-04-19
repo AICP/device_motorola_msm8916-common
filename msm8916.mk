@@ -145,9 +145,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8916 \
     memtrack.msm8916
 
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-
 # Firmware Extraction
 ifeq ($(filter surnia,$(PRODUCT_DEVICE)),)
 PRODUCT_COPY_FILES += \
