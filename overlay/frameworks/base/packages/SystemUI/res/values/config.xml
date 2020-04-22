@@ -34,4 +34,7 @@
 
     <!-- Doze: pulse parameter - delay to wait for the screen to wake up after an intent -->
     <integer name="doze_pulse_delay_in_intent">0</integer>
+
+    <!-- Force Low quality on scrren record for legacy devices -->
+    <bool name="config_screenRecordforceLowQuality">true</bool>
 </resources>
