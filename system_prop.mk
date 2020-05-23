@@ -41,6 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.cpurend.vsync=false \
     persist.hwc.mdpcomp.enable=1 \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.use_color_management=true \
     ro.qualcomm.cabl=2
      
 # GPS
