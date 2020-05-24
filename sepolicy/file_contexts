@@ -53,6 +53,7 @@
 
 # FSG
 /fsg(/.*)?                                                  u:object_r:fsg_file:s0
+/pds(/.*)?                                                  u:object_r:firmware_file:s0
 
 # RIL
 /data/misc/cutback(/.*)?                                    u:object_r:cutback_data_file:s0

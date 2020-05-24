@@ -54,3 +54,10 @@ mode: 0755
 user: AID_ROOT
 group: AID_ROOT
 caps: 0
+
+[pds/]
+mode: 0771
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: 0
+
