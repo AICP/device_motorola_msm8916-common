@@ -3,3 +3,6 @@ allow fsck cache_file:dir r_dir_perms;
 allow fsck persist_file:dir r_dir_perms;
 allow fsck modem_efs_partition_device:blk_file { read write };
 allow fsck self:capability { dac_override dac_read_search };
+allow fsck block_device:blk_file { ioctl open read write };
+allow fsck modem_efs_partition_device:blk_file { ioctl open read write };
+
