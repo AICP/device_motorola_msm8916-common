@@ -29,16 +29,15 @@
 # Set Memory paremeters.
 #
 # Set per_process_reclaim tuning parameters
-# 2GB 64-bit will have aggressive settings when compared to 1GB 32-bit
+# 2GB will have aggressive settings when compared to 1GB
 # 1GB and less will use vmpressure range 50-70, 2GB will use 10-70
 # 1GB and less will use 512 pages swap size, 2GB will use 1024
 #
 # Set Low memory killer minfree parameters
 # 32 bit all memory configurations will use 15K series
-# 64 bit all memory configurations will use 18K series
 #
 # Set ALMK parameters (usually above the highest minfree values)
-# 32 bit will have 53K & 64 bit will have 81K
+# 32 bit will have 53K
 #
 
 arch_type=`uname -m`
@@ -65,20 +64,13 @@ echo 1 > /sys/module/process_reclaim/parameters/enable_process_reclaim
 echo 70 > /sys/module/process_reclaim/parameters/pressure_max
 echo 30 > /sys/module/process_reclaim/parameters/swap_opt_eff
 echo 0 > /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk
+echo "15360,19200,23040,26880,34415,43737" > /sys/module/lowmemorykiller/parameters/minfree
+echo 53059 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
 
-if [ "$arch_type" == "aarch64" ] && [ $MemTotal -gt 1048576 ]; then
+if [ $MemTotal -gt 1048576 ]; then
     echo 10 > /sys/module/process_reclaim/parameters/pressure_min
     echo 1024 > /sys/module/process_reclaim/parameters/per_swap_size
-    echo "18432,23040,27648,32256,55296,80640" > /sys/module/lowmemorykiller/parameters/minfree
-    echo 81250 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
-elif [ "$arch_type" == "aarch64" ] && [ $MemTotal -lt 1048576 ]; then
-    echo 50 > /sys/module/process_reclaim/parameters/pressure_min
-    echo 512 > /sys/module/process_reclaim/parameters/per_swap_size
-    echo "18432,23040,27648,32256,55296,80640" > /sys/module/lowmemorykiller/parameters/minfree
-    echo 81250 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
 else
     echo 50 > /sys/module/process_reclaim/parameters/pressure_min
     echo 512 > /sys/module/process_reclaim/parameters/per_swap_size
-    echo "15360,19200,23040,26880,34415,43737" > /sys/module/lowmemorykiller/parameters/minfree
-    echo 53059 > /sys/module/lowmemorykiller/parameters/vmpressure_file_min
 fi
