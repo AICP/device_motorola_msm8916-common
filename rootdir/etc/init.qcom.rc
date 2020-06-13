@@ -548,6 +548,11 @@ on moto-charger
     start thermal-com
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
+service qcom-mem /vendor/bin/init.qcom.mem.sh
+    disabled
+    oneshot
+
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
+    start qcom-mem
