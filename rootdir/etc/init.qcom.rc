@@ -176,6 +176,10 @@ on boot
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+    # Graphics node permissions
+    chown system graphics /sys/devices/virtual/graphics/fb0/mdp/bw_mode_bitmap
+    chmod 0664 /sys/devices/virtual/graphics/fb0/mdp/bw_mode_bitmap
+
 on post-fs
     mkdir /persist/camera 0755 oem_5004 oem_5004
     mkdir /persist/camera/ledcal 0755 camera oem_5004
