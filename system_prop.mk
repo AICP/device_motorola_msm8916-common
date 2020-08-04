@@ -76,7 +76,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.avoid_gfx_accel=true \
     ro.vendor.qti.am.reschedule_service=true \
-    ro.vendor.qti.sys.fw.bservice_enable=true
+    ro.vendor.qti.sys.fw.bservice_enable=true \
+    ro.vendor.qti.sys.fw.bservice_limit=5 \
+    ro.vendor.qti.sys.fw.bservice_age=5000
 
 # Netflix
 PRODUCT_PROPERTY_OVERRIDES += \
