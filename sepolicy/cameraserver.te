@@ -1,1 +1,3 @@
 allow cameraserver camera_bgproc_service:service_manager add;
+allow cameraserver camera_socket:dir rw_dir_perms;
+allow cameraserver camera_socket:file create_file_perms;
