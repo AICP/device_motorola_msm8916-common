@@ -105,6 +105,7 @@ PRODUCT_PACKAGES += \
     libc_util \
     libboringssl-compat \
     libshims_camera \
+    libshims_unwind \
     Snap
 
 PRODUCT_COPY_FILES += \

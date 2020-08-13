@@ -146,6 +146,7 @@ BOARD_SEPOLICY_DIRS += $(VENDOR_PATH)/sepolicy
 
 # Shims
 TARGET_LD_SHIM_LIBS := \
+    /system/bin/cameraserver|libshims_unwind.so \
     /system/vendor/lib/libmdmcutback.so|libqsap_shim.so \
     /system/vendor/lib/libmot_sensorlistener.so|libsensor.so \
     /system/vendor/lib/libjustshoot.so|libshims_camera.so \
