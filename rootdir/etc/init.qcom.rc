@@ -235,6 +235,7 @@ on post-fs
 
     write /proc/sys/vm/page-cluster 0
     write /proc/sys/vm/swappiness 60
+    write /proc/sys/vm/vfs_cache_pressure 50
 
     # Allow writing to the kernel trace log.
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
