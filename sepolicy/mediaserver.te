@@ -24,3 +24,4 @@ allow mediaserver sensor_privacy_service:service_manager find;
 allow mediaserver cameraproxy_service:service_manager find;
 allow mediaserver cameraserver_service:service_manager add;
 allow mediaserver fwk_camera_hwservice:hwservice_manager add;
+allow mediaserver sysfs_camera:file { getattr open read };
