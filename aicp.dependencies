@@ -7,22 +7,22 @@
   {
     "repository": "LineageOS/android_external_bson",
     "target_path": "external/bson",
-    "branch":      "lineage-17.1"
+    "branch":      "lineage-18.1"
   },
   {
     "repository": "LineageOS/android_external_sony_boringssl-compat",
     "target_path": "external/sony/boringssl-compat",
-    "branch":      "lineage-17.1"
+    "branch":      "lineage-18.1"
   },
   {
     "repository": "LineageOS/android_hardware_sony_timekeep",
     "target_path": "hardware/sony/timekeep",
-    "branch":      "lineage-17.1"
+    "branch":      "lineage-18.1"
   },
   {
     "repository": "LineageOS/android_system_qcom",
     "target_path": "system/qcom",
-    "branch":      "lineage-17.1"
+    "branch":      "lineage-18.1"
   }
 ]
 
