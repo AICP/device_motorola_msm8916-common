@@ -1,7 +1,8 @@
 [
   {
     "repository":  "AICP/proprietary_vendor_motorola",
-    "target_path": "vendor/motorola"
+    "target_path": "vendor/motorola",
+    "branch":      "q10.0"
   },
 
   {
