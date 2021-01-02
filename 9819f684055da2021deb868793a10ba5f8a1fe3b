@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ff5c824a_c68d363e",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 774
+      },
+      "writtenOn": "2021-01-02T04:02:18Z",
+      "side": 1,
+      "message": "q10.0 is the default branch defined in the manifest for the dependencies, not r11.1, there was no need to add this line https://github.com/AICP/vendor_aicp/commit/fafabae6300a7b3ab13ca955ea1a70ab8a1dedd9#diff-a578c82bafec9f0bcfa9595c35ff6ae239001be2cd9e7058b8d0f7f7ec72a49d",
+      "revId": "9819f684055da2021deb868793a10ba5f8a1fe3b",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
