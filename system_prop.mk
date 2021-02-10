@@ -34,13 +34,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196608 \
     persist.hwc.mdpcomp.enable=1 \
+    debug.mdpcomp.logs=0 \
     debug.sf.recomputecrop=0 \
     debug.sf.disable_backpressure=1 \
     debug.sf.latch_unsignaled=1 \
     debug.cpurend.vsync=false \
-    persist.hwc.mdpcomp.enable=1 \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
-    ro.qualcomm.cabl=2
+    ro.qualcomm.cabl=0
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
