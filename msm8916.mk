@@ -368,3 +368,4 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 $(call inherit-product, vendor/motorola/msm8916-common/msm8916-common-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
