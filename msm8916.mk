@@ -144,8 +144,7 @@ PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-service \
     gralloc.msm8916 \
     hwcomposer.msm8916 \
-    memtrack.msm8916 \
-    libtinyxml
+    memtrack.msm8916
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
