@@ -53,7 +53,6 @@ on fs
     # set up a symbolic link so the many references to the old location still work and the java code can remain platform agnostic.
     symlink /dev/block/bootdevice /dev/block/platform/msm_sdcc.1
 
-    mkdir /persist/data 0700  system system
     restorecon_recursive /persist
 
     # Start HW service manager early
