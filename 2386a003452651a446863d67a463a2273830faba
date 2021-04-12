@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b64cd57_ae39ac77",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1682
+      },
+      "writtenOn": "2021-04-12T11:54:36Z",
+      "side": 1,
+      "message": "device/motorola/msm8916-common/gps/utils/loc_target.cpp:231:18: error: no matching function for call to \u0027read_a_line\u0027\n            if (!read_a_line( rd_mdm, LINE_LEN))",
+      "revId": "2386a003452651a446863d67a463a2273830faba",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
