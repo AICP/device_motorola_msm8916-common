@@ -63,6 +63,7 @@ on init
 
 on fs
     mount_all /vendor/etc/fstab.qcom --early
+    swapon_all /vendor/etc/fstab.qcom
 
     restorecon_recursive /persist
 
@@ -558,8 +559,6 @@ on property:apexd.status=ready
     mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
 
 on property:sys.boot_completed=1
-    # Enable ZRAM on boot_complete
-    swapon_all /vendor/etc/fstab.qcom
     restart vendor.qcamerasvr
     write /sys/class/devfreq/1c00000.qcom,kgsl-3d0/governor "msm-adreno-tz"
     write /sys/class/devfreq/soc:qcom,cpubw/governor "cpufreq"
