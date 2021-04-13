@@ -48,14 +48,21 @@ on init
     write /sys/class/devfreq/1c00000.qcom,kgsl-3d0/governor "performance"
     write /sys/class/devfreq/soc:qcom,cpubw/governor "performance"
 
-on fs
+    # wait for bootdevice and symlink early
+    # QSEE rpmb listener need symlink for bootdevice
     wait /dev/block/platform/soc.0/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc.0/${ro.boot.bootdevice} /dev/block/bootdevice
 
-    mount_all /vendor/etc/fstab.qcom --early
-
     # set up a symbolic link so the many references to the old location still work and the java code can remain platform agnostic.
     symlink /dev/block/bootdevice /dev/block/platform/msm_sdcc.1
+
+    # start qseecomd early as we mount /system early
+    # qseecomd needs /dev/block/bootdevice
+    # vold needs keymaster that needs qseecomd
+    start vendor.qseecomd
+
+on fs
+    mount_all /vendor/etc/fstab.qcom --early
 
     restorecon_recursive /persist
 
@@ -80,8 +87,6 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
     write /sys/kernel/boot_adsp/boot 1
-
-    start vendor.qseecomd
 
 on boot
     #Create QMUX deamon socket area
@@ -254,7 +259,8 @@ on post-fs
     # Allow writing to the kernel trace log.
     chmod 0222 /sys/kernel/debug/tracing/trace_marker
 
-    start vendor.qseecomd
+    # Wait qseecomd started
+    wait_for_prop sys.listeners.registered true
 
 # msm specific files that need to be created on /data
 on post-fs-data
