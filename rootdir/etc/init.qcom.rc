@@ -198,6 +198,10 @@ on boot
     chmod 0664 /sys/devices/virtual/graphics/fb0/mdp/bw_mode_bitmap
 
 on post-fs
+
+    # Permissions required for power HAL
+    chown system system /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
+
     mkdir /persist/camera 0755 oem_5004 oem_5004
     mkdir /persist/camera/ledcal 0755 camera oem_5004
     mkdir /persist/factory 0755 oem_5004 oem_5004
