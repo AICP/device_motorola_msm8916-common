@@ -22,6 +22,30 @@
       },
       "revId": "4727c147f2df803ca87444fff86bacd1f55faead",
       "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bab80df6_b22c14c0",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1799
+      },
+      "writtenOn": "2021-04-19T14:56:11Z",
+      "side": 1,
+      "message": "It is set to perf gov by default, have amend-ed it locally will push it with next wave of patches.\n\nThanks for reviewing.",
+      "parentUuid": "4064e605_4b6665a9",
+      "range": {
+        "startLine": 45,
+        "startChar": 0,
+        "endLine": 46,
+        "endChar": 77
+      },
+      "revId": "4727c147f2df803ca87444fff86bacd1f55faead",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
     }
   ]
 }
