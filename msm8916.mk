@@ -154,7 +154,7 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # Firmware Extraction
-ifeq ($(filter surnia,$(TARGET_DEVICE)),)
+ifeq ($(filter surnia,$(PRODUCT_DEVICE)),)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/extract_firmware.sh:install/bin/extract_firmware.sh
 endif
