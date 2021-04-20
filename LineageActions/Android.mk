@@ -1,7 +1,7 @@
 LOCAL_PATH:= $(call my-dir)
 
 # exclude harpia from CMActions
-ifneq ($(filter lux merlin osprey surnia, $(TARGET_DEVICE)),)
+ifneq ($(filter lux merlin osprey surnia, $(PRODUCT_DEVICE)),)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := optional
