@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "380d0fe6_a5d9f9bc",
+        "filename": "rootdir/etc/init.qcom.rc",
+        "patchSetId": 3
+      },
+      "lineNbr": 559,
+      "author": {
+        "id": 1682
+      },
+      "writtenOn": "2021-04-20T20:18:45Z",
+      "side": 1,
+      "message": "Will this not too heavy? IG this is that what cause anr on harpia, maybe a bit earlier would be better",
+      "revId": "23cfa1a88748eb5b16a84c4e88a6ce81e14d88b4",
+      "serverId": "9f904cbb-a964-4fab-a7dc-5cfc4d5c238b"
+    }
+  ]
+}
