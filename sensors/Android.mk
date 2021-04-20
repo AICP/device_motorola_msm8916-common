@@ -39,11 +39,11 @@ ifeq ($(BOARD_USES_STML0XX_SENSOR_HUB), true)
         # Expose secondary accel for non-user builds
         SH_CFLAGS += -D_ENABLE_ACCEL_SECONDARY
     endif
-    ifneq ($(filter lux osprey, $(TARGET_DEVICE)),)
+    ifneq ($(filter lux osprey, $(PRODUCT_DEVICE)),)
         SH_CFLAGS += -D_ENABLE_MAGNETOMETER
         SH_CFLAGS += -D_ENABLE_CHOPCHOP
     endif
-    ifneq ($(filter merlin, $(TARGET_DEVICE)),)
+    ifneq ($(filter merlin, $(PRODUCT_DEVICE)),)
         SH_CFLAGS += -D_ENABLE_CHOPCHOP
     endif
 
@@ -55,14 +55,14 @@ ifeq ($(BOARD_USES_STML0XX_SENSOR_HUB), true)
     LOCAL_CFLAGS := -DLOG_TAG=\"MotoSensors\"
     LOCAL_CFLAGS += $(SH_CFLAGS)
 
-    ifneq ($(filter surnia lux merlin osprey, $(TARGET_DEVICE)),)
+    ifneq ($(filter surnia lux merlin osprey, $(PRODUCT_DEVICE)),)
         # Sensor HAL file for M0 hub (low-tier) products
         LOCAL_SRC_FILES :=              \
             $(SH_PATH)/SensorBase.cpp   \
             $(SH_PATH)/HubSensor.cpp    \
             $(SH_PATH)/SensorHal.cpp
 
-        ifneq ($(filter lux osprey, $(TARGET_DEVICE)),)
+        ifneq ($(filter lux osprey, $(PRODUCT_DEVICE)),)
             # Additional Sensor HAL file for M0 hub products with magnetometer
             LOCAL_SRC_FILES +=              \
                 $(SH_PATH)/AkmSensor.cpp    \
@@ -115,7 +115,7 @@ ifeq ($(BOARD_USES_STML0XX_SENSOR_HUB), true)
     # AKM executable        #
     #########################
 
-    ifneq ($(filter lux osprey, $(TARGET_DEVICE)),)
+    ifneq ($(filter lux osprey, $(PRODUCT_DEVICE)),)
         include $(CLEAR_VARS)
 
         AKM_PATH := 8916_ak09912_akmd_6D

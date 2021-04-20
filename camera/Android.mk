@@ -11,7 +11,7 @@ LOCAL_SRC_FILES := \
 LOCAL_SHARED_LIBRARIES := \
     libhardware liblog libcamera_client libutils libcutils libgui libsensor
 
-ifneq ($(filter harpia lux, $(TARGET_DEVICE)),)
+ifneq ($(filter harpia lux, $(PRODUCT_DEVICE)),)
 LOCAL_CFLAGS += -DCLOSE_NATIVE_HANDLE
 endif
 
