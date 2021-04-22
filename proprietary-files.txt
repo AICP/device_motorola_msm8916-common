@@ -77,6 +77,7 @@ vendor/lib/egl/libQTapGLES.so
 vendor/lib/egl/libRBEGL_adreno.so |d1e8d57ca13187444b88dee758f007e8ab098ea1
 vendor/lib/egl/libRBGLESv1_CM_adreno.so
 vendor/lib/egl/libRBGLESv2_adreno.so |4840376a639fb6295669340dbb22feebeba6f9b9
+vendor/lib/egl/libq3dtools_esx.so
 vendor/lib/libadreno_utils.so
 vendor/lib/libbccQTI.so
 vendor/lib/libC2D2.so
@@ -87,6 +88,9 @@ vendor/lib/libgsl.so
 vendor/lib/libllvm-glnext.so
 vendor/lib/libllvm-qcom.so
 vendor/lib/libOpenCL.so
+vendor/lib/librs_adreno.so
+vendor/lib/librs_adreno_sha1.so
+vendor/lib/libRSDriver_adreno.so
 vendor/lib/libsc-a3xx.so
 vendor/lib/libscale.so
 
