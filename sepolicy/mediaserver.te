@@ -1,27 +1,24 @@
 binder_call(mediaserver, hal_configstore)
 
-allow mediaserver hal_configstore_ISurfaceFlingerConfigs:hwservice_manager { find };
-allow mediaserver sysfs_batteryinfo:dir r_dir_perms;
-allow mediaserver sysfs_batteryinfo:file r_file_perms;
-
 #for v4L node "name" access
 allow mediaserver sysfs_graphics:file rw_file_perms;
 allow mediaserver camera_bgproc_service:service_manager { add };
 
 allow mediaserver device:dir r_dir_perms;
+allow mediaserver hal_configstore_ISurfaceFlingerConfigs:hwservice_manager { find };
+allow mediaserver serialno_prop:file { read open };
 
-allow mediaserver serialno_prop:file read;
-allow mediaserver serialno_prop:file open;
-
+allow mediaserver sysfs_batteryinfo:dir r_dir_perms;
+allow mediaserver sysfs_batteryinfo:file r_file_perms;
 allow mediaserver sysfs_battery_supply:dir search;
 allow mediaserver sysfs_battery_supply:file { getattr open read };
 
 # Use HALs
 hal_client_domain(mediaserver, hal_lineage_camera_motor)
 
-allow mediaserver hal_camera_hwservice:hwservice_manager find;
-allow mediaserver sensor_privacy_service:service_manager find;
 allow mediaserver cameraproxy_service:service_manager find;
 allow mediaserver cameraserver_service:service_manager add;
 allow mediaserver fwk_camera_hwservice:hwservice_manager add;
+allow mediaserver hal_camera_hwservice:hwservice_manager find;
+allow mediaserver sensor_privacy_service:service_manager find;
 allow mediaserver sysfs_camera:file { getattr open read };
