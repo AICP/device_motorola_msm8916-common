@@ -10,6 +10,5 @@ r_dir_file(stml0xx, firmware_file)
 allow stml0xx vendor_shell_exec:file rx_file_perms;
 allow stml0xx vendor_toolbox_exec:file rx_file_perms;
 
-allow stml0xx vendor_shell_exec:file read;
 allow stml0xx stml0xx_exec:file execute_no_trans;
 allow stml0xx sensors_device:chr_file rw_file_perms;
