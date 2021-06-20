@@ -278,4 +278,7 @@
          snapshots are disabled, and snapshots will only be stored at config_highResTaskSnapshotScale
          -->
     <item name="config_lowResTaskSnapshotScale" format="float" type="dimen">0.3</item>
+
+    <!-- Whether to allow process with media UID to access CameraServiceProxy -->
+    <bool name="config_allowMediaUidForCameraServiceProxy">true</bool>
 </resources>
