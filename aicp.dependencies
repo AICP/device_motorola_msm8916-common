@@ -18,6 +18,11 @@
     "repository": "LineageOS/android_system_qcom",
     "target_path": "system/qcom",
     "branch":      "lineage-18.1"
+  },
+  {
+    "repository": "AICP/hardware_motorola",
+    "target_path": "hardware/motorola",
+    "branch":      "r11.1"
   }
 ]
 
