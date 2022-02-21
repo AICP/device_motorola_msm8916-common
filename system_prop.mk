@@ -41,15 +41,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.mdpcomp.logs=0 \
     debug.sf.recomputecrop=0 \
     debug.sf.disable_backpressure=1 \
-    debug.sf.enable_gl_backpressure=1 \
-    debug.sf.latch_unsignaled=0 \
+    debug.sf.latch_unsignaled=1 \
     debug.cpurend.vsync=false \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.qualcomm.cabl=0
-
-# Force triple frame buffers
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
 # GPS
 PRODUCT_PROPERTY_OVERRIDES += \
